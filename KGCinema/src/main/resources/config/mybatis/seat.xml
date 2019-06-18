@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="seat">
+	<select id="select" resultType="com.kg.cinema.seat.Seatbean" parameterType="int">
+		select * from seat where seatstyle = #{seatstyle}
+	</select>
+	
+	<select id="seatStyleAll" resultType="com.kg.cinema.seat.Seatbean">
+		select distinct seatstyle from seat
+	</select>
+	
+	<select id="seatCount" resultType="int" parameterType="String">
+		select  count(*) from seat where seatstyle = #{seatstyle}
+	</select>	
+
+</mapper>

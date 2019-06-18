@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="screen">
+	<select id="select" resultType="com.kg.cinema.screen.Screenbean" parameterType="com.kg.cinema.screen.Screenbean">
+		select * from screen where s_theater = #{s_theater} and s_scrno = #{s_scrno}
+	</select>
+	
+	<select id="count" resultType="com.kg.cinema.screen.Screenbean">
+		select s_theater, s_scrno, s_seatstyle, s_seatcnt from screen group by s_theater, s_scrno, s_seatstyle, s_seatcnt
+	</select>
+	
+	<select id="screenMgSelectAll"  resultType="com.kg.cinema.screen.Screenbean">	   
+		select * from (
+		select rownum s_rn, s.* from
+	    (select * from screen order by s_no desc) s )
+	</select>
+ 	
+	<select id="screenDetail" parameterType="int" resultType="com.kg.cinema.screen.Screenbean">
+	   select * from screen where s_no=#{s_no}
+	</select> 		
+	
+	<select id="scrNo" parameterType="String" resultType="com.kg.cinema.screen.Screenbean">
+		select s_scrno from screen where s_theater= #{s_theater}
+	</select>		
+
+</mapper>

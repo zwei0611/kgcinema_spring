@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="login">
+
+	<select id="check" resultType="int" parameterType="com.kg.cinema.login.Loginbean">
+		select count(*) from join where j_id = #{userid} and j_pwd = #{userpw}
+	</select>
+
+</mapper>

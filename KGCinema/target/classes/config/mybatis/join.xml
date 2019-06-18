@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="join">
+	<select id="selectAllDynamic" resultType="dto">
+		select * from movie where m_premiere <![CDATA[<]]> sysdate order by m_premiere desc
+	</select>
+	
+	<select id="idCheck" resultType="int">
+		select count(*) from join where j_id = #{id}
+	</select>
+	
+	<insert id="insert" parameterType="com.kg.cinema.join.Joinbean">
+		insert into join values(join_seq.nextval,#{j_id},#{j_name},#{j_pwd},#{j_juso1},#{j_juso2},to_date(#{j_birth},'yyyy-mm-dd'),#{j_phone},#{j_email},null)
+	</insert>
+	
+	<select id="myInfo" resultType="com.kg.cinema.join.Joinbean" parameterType="String">
+		select * from join where j_id = #{id}
+	</select>
+	
+	<update id="edit">
+		update join set j_juso1=#{j_juso1},j_juso2=#{j_juso2},j_birth=to_date(#{j_birth},'yyyy-mm-dd'),j_phone=#{j_phone},j_email=#{j_email},j_file1=#{j_file1} where j_id=#{j_id}
+	</update>
+	
+	<update id="chagePass">
+		update join set j_pwd=#{j_pwd} where j_id=#{j_id}
+	</update>
+	
+	<delete id="delete">
+		delete from join where j_id = #{id}
+	</delete>
+
+</mapper>

@@ -1,0 +1,290 @@
+sqlplus system/oracle
+
+/*
+kgCinema 프로젝트 DB 정리
+*/
+
+drop sequence join_seq;
+drop sequence notice_seq;
+drop sequence theater_seq;
+drop sequence screen_seq;
+drop sequence schedule_seq;
+drop sequence seat_seq;
+drop sequence reserve_seq;
+drop sequence reserve_cancel_seq;
+drop sequence movie_reply_seq;
+drop sequence event_seq;
+drop sequence movie_seq;
+drop sequence mainslide_seq;
+drop sequence mainevent_seq;
+drop sequence movieslide_seq;
+drop table reserve;
+drop table reserve_cancel;
+drop table event;
+drop table notice;
+drop table movie_reply;
+drop table seat;
+drop table schedule;
+drop table screen;
+drop table theater;
+drop table movie;
+drop table join;
+drop table mainslide;
+drop table mainevent;
+drop table movieslide;
+
+/*
+event(이벤트 게시판)
+*/
+create sequence event_seq;
+
+create table event (
+ e_no number(4) not null,
+ e_title varchar2(50) not null,   
+ e_period varchar2(40) not null,   
+ e_content varchar2(30) not null,   
+ e_date date not null,
+ e_file varchar2(30) not null
+);
+
+/*
+join(회원가입)
+*/
+ create sequence join_seq;
+
+create table join (
+  j_no number(4) not null,
+  j_id varchar2(15) not null,
+  j_name varchar2(15) not null,
+  j_pwd varchar2(15) not null,
+  j_juso1 varchar2(70) not null,
+  j_juso2 varchar2(50) not null,
+  j_birth date not null,
+  j_phone varchar2(20) not null,
+  j_email varchar2(20) not null,
+  j_file1 varchar2(30) null,
+  primary key(j_id)
+ );
+
+
+/*
+notice(공지사항)
+*/
+
+ create sequence notice_seq;
+
+create table notice (
+ n_no number(4) not null,               
+ n_loc varchar2(30) null,
+ n_title varchar2(130) not null,
+ n_redate date not null,
+ n_content varchar2(3000) not null
+);
+
+
+/*
+theater(극장)
+*/
+ create sequence theater_seq;
+
+create table theater(
+ t_no number(4) not null,
+ t_location varchar2(30) not null,
+ t_theater varchar2(20) primary key,
+ t_juso1 varchar2(70) not null,
+ t_juso2 varchar2(50) not null
+);
+
+/*
+screen(상영관)
+*/
+ create sequence screen_seq;
+
+create table screen (
+ s_no number(4) not null,
+ s_theater varchar2(20) references theater(t_theater) on delete cascade,
+ s_scrno varchar2(30) not null,
+ s_type varchar2(10) not null,
+ s_seatcnt number(4) not null,
+ s_seatstyle number(2) not null,
+ s_price number(5) check (s_price < 20000),
+ primary key (s_theater, s_scrno)
+);
+
+/*
+s_type설명
+일반관, COMFORT, TableZone, MX, THE BOUTIQUE
+*/
+
+/*
+schedule(스케줄 관리)
+*/
+ create sequence schedule_seq;
+
+create table schedule(
+ schedule_id number(6) not null primary key,
+ theater varchar2(20) not null,
+ scrno varchar2(30) not null,
+ title varchar2(30) not null,
+ starthour date not null,
+ endhour date not null
+);
+
+/*
+seat(좌석)
+*/
+ create sequence seat_seq;
+
+create table seat(
+ seat_id number(4) not null,
+ seatstyle number(2) not null,
+ seatgroup varchar2(2) not null,
+ seatno number(2) not null,
+ seattype number(2) not null,
+ left number(3) not null,
+ top number(3) not null
+);
+
+/*
+seattype설명
+일반좌석 10
+선택불가 30
+장애인석 40
+로얄석 71
+테이블석 76
+스위트석 82
+4인소파 83
+2인소파 84
+*/
+
+/*
+reserve(예매)
+*/
+ create sequence reserve_seq;
+
+create table reserve (
+ r_no number(8) primary key,
+ r_theater varchar2(30) not null,
+ r_scrno varchar2(30) not null,
+ r_id varchar2(15) references join(j_id) on delete cascade,
+ r_title varchar2(100) not null,
+ r_type varchar2(50) not null,
+ r_start date not null,
+ r_grade varchar2(30) not null,
+ r_inwon varchar2(60) not null,
+ r_seat varchar2(60) not null,
+ r_price number(6) not null,
+ foreign key (r_theater) references theater(t_theater) on delete cascade,
+ foreign key (r_theater, r_scrno) references screen(s_theater, s_scrno) on delete cascade
+);
+
+/*
+reserve_cancel(예매취소)
+*/
+ create sequence reserve_cancel_seq;
+
+create table reserve_cancel (
+ r_no number(8) primary key,
+ r_theater varchar2(30) not null,
+ r_scrno varchar2(30) not null,
+ r_id varchar2(15) references join(j_id) on delete cascade,
+ r_title varchar2(100) not null,
+ r_type varchar2(50) not null,
+ r_start date not null,
+ r_grade varchar2(30) not null,
+ r_inwon varchar2(60) not null,
+ r_seat varchar2(60) not null,
+ r_price number(6) not null,
+ foreign key (r_theater) references theater(t_theater) on delete cascade,
+ foreign key (r_theater, r_scrno) references screen(s_theater, s_scrno) on delete cascade
+);
+
+/*
+movie(영화)
+*/
+create sequence movie_seq;
+
+create table movie (
+ m_no number(6) primary key,
+ m_title varchar2(80) not null,
+ m_subtitle varchar2(80) not null,
+ m_grade varchar2(10) not null,
+ m_point number(6,2) null,
+ m_type varchar2(60) not null,
+ m_premiere date not null,
+ m_director varchar2(60) not null,
+ m_actor varchar2(100) not null,
+ m_genre varchar2(50) not null,
+ m_audience number(10) default 0,
+ m_story varchar2(1600) not null,
+ m_poster varchar2(40) not null,
+ m_steal1 varchar2(40) not null,
+ m_steal2 varchar2(40) not null,
+ m_steal3 varchar2(40) not null,
+ m_steal4 varchar2(40) not null,
+ m_steal5 varchar2(40) not null,
+ m_inwon number(6) null
+);
+
+/*
+movie_reply(영화상세 댓글)
+*/
+
+ create sequence movie_reply_seq;
+
+create table movie_reply (
+ dr_no number(8) not null,
+ dr_id varchar2(15) not null,
+ dr_date date not null,
+ dr_point number(1) not null,
+ dr_content varchar2(200) null,
+ dr_mno number(6) not null
+);
+
+/*
+mainslide(메인슬라이드)
+*/
+create sequence mainslide_seq;
+create table mainslide (
+ ms_no number(4) not null,
+ ms_title varchar2(50) null,
+ ms_subtitle varchar2(50) null,
+ ms_content varchar2(200) null,
+ ms_date date not null,
+ ms_file varchar2(30) not null
+);
+
+/*
+mainevent(메인이미지)
+*/
+create sequence mainevent_seq; 
+create table mainevent (
+ me_no number(4) not null,
+ me_date date not null,
+ me_add varchar2(20) null,
+ me_file1 varchar2(30) null,
+ me_file2 varchar2(30) null,
+ me_file3 varchar2(30) null,
+ me_file4 varchar2(30) null,
+ me_file5 varchar2(30) null,
+ me_file6 varchar2(30) null,
+ me_file7 varchar2(30) null,
+ me_file8 varchar2(30) null,
+ me_file9 varchar2(30) null
+);
+
+/*
+movieslide(영화슬라이드)
+*/
+create sequence movieslide_seq;
+create table movieslide (
+ mvs_no number(4) not null,
+ mvs_date date not null,
+ mvs_file varchar2(30) not null,
+ mvs_video varchar2(30) not null
+);
+
+
+commit;
+
+

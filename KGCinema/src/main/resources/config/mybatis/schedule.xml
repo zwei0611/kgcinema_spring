@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="schedule">
+	<select id="select" parameterType="com.kg.cinema.schedule.ScheduleSelectbean" resultType="com.kg.cinema.schedule.Schedulebean">
+		select * from schedule 
+		where theater like #{theater} 
+		and title like '%' || #{movie} || '%' 
+		and starthour like to_date(#{date},'yyyy-mm-dd') 
+		and starthour <![CDATA[>]]> sysdate + 20/(24*60) order by starthour asc
+	</select>
+	
+	<select id="scheduleMgSelectAll"  resultType="com.kg.cinema.schedule.Schedulebean">	   
+	   select * from (
+	   select rownum rn, s.* from
+	   (select * from schedule where ${skey} like '%' || #{sval,jdbcType=VARCHAR} || '%' order by schedule_id desc) s
+	   ) where rn between #{start} and #{end}
+	</select>
+	
+	<select id="scheduleMgcountAll" resultType="int">
+	     select count(*)  from schedule
+	</select>
+	
+	<select id="scheduleMgcountAllSearch" parameterType="com.kg.cinema.schedule.Schedulebean"  resultType="int">
+ 	   select  count(*) from schedule where ${skey} like '%' || #{sval,jdbcType=VARCHAR} || '%'  
+ 	</select>	
+	
+	<select id="detail" parameterType="int" resultType="com.kg.cinema.schedule.Schedulebean">
+		select * from schedule where schedule_id = #{idx}
+	</select>
+
+</mapper>

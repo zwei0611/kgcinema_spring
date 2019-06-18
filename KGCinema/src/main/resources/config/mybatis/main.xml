@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="main">
+
+	<select id="mainSlideSelectAll" resultType="com.kg.cinema.Mainbean">
+		select * from (
+		select rownum ms_rn, m.* from
+	    (select * from mainslide order by ms_no asc) m )
+	</select>	
+	   
+	<select id="mainSlideCountAll" resultType="int">
+	     select count(*)  from mainslide
+	</select>	
+	
+ 	<select id="mainSlideDetail" parameterType="int" resultType="com.kg.cinema.Mainbean">
+	   select * from mainslide where ms_no=#{ms_no}
+	</select>	
+	
+	<select id="mainEventSelectAll" resultType="com.kg.cinema.Mainbean">
+		select * from (
+		select rownum me_rn, m.* from
+	    (select * from mainevent order by me_no desc) m )
+	</select>	
+	
+ 	<select id="mainEventDetail" parameterType="int" resultType="com.kg.cinema.Mainbean">
+	   select * from mainevent where me_no=#{me_no}
+	</select>		
+	
+
+</mapper>

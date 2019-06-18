@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="reserve">
+	<select id="select" parameterType="com.kg.cinema.reserve.Reservebean" resultType="com.kg.cinema.reserve.Reservebean">
+		select * from reserve where r_theater = #{r_theater} and r_scrno = #{r_scrno} and r_start = to_date(#{date},'yyyy-mm-dd hh24:mi')
+	</select>
+	
+	<insert id="insert" parameterType="com.kg.cinema.reserve.Reservebean">
+		insert into reserve values(reserve_seq.nextval,#{r_theater},#{r_scrno},#{r_id},#{r_title},#{r_type},to_date(#{date},'yyyy-mm-dd hh24:mi'),#{r_grade},#{r_inwon},#{r_seat},#{r_price})
+	</insert>
+
+	<select id="detail" parameterType="String" resultType="com.kg.cinema.reserve.Reservebean">
+		select * from reserve where r_id = #{id} and r_start <![CDATA[>]]> sysdate - 2/24 order by r_no desc
+	</select>
+	
+	<select id="oldDetail" parameterType="String" resultType="com.kg.cinema.reserve.Reservebean">
+		select * from reserve where r_id = #{id} and r_start <![CDATA[<]]> sysdate - 2/24 order by r_no desc
+	</select>
+	
+	<select id="detailOne" parameterType="int" resultType="com.kg.cinema.reserve.Reservebean">
+		select * from reserve where r_no = #{no}
+	</select>
+	
+	<delete id="delete" parameterType="int">
+		delete from reserve where r_no = #{no} 
+	</delete>
+</mapper>

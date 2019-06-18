@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="reply">
+
+
+	<select id="replySelectAll"  resultType="com.kg.cinema.reply.Replybean">	   
+	   select * from (
+	   select rownum rn, r.* from
+	   (select * from movie_reply where ${skey} like '%' || #{sval,jdbcType=VARCHAR} || '%' order by dr_no desc) r
+	   ) where dr_mno = #{dr_mno} and rn between #{start} and #{end}		   
+	</select>
+	
+	<select id="replySelect"  resultType="com.kg.cinema.reply.Replybean" parameterType="com.kg.cinema.reply.Replybean">	   
+	   select * from movie_reply where dr_mno = #{dr_mno} and dr_id = #{dr_id}
+	</select>	
+	
+	<select id="countAll" resultType="int">
+	   select count(*)  from movie_reply
+	</select>
+	
+	<select id="countAllSearch" parameterType="com.kg.cinema.reply.Replybean"  resultType="int">
+ 	   select  count(*) from movie_reply where ${skey} like '%' || #{sval,jdbcType=VARCHAR} || '%'  
+ 	</select>	
+ 	
+	<select id="countReply" parameterType="com.kg.cinema.reply.Replybean" resultType="int">
+ 	   select  count(*) from movie_reply where dr_mno=#{dr_mno}  
+ 	</select>	 	
+ 	
+	<select id="countReplySu" parameterType="com.kg.cinema.reply.Replybean" resultType="int">
+ 	   select count(*) from movie_reply where dr_mno = #{dr_mno} and dr_content is not null
+ 	</select>	 	
+ 	
+	<select id="scoreSum" parameterType="String" resultType="String">
+ 	   select sum(dr_point) from movie_reply where dr_mno=#{dr_mno}
+ 	</select>	 	
+ 	
+    <insert id="replyInsert">
+	   insert into movie_reply(dr_no,dr_id,dr_date,dr_point,dr_content,dr_mno)
+	   values(movie_reply_seq.nextval,#{dr_id},sysdate,#{dr_point},null,#{dr_mno})
+	</insert>
+
+	<update id="replyEdit" parameterType="com.kg.cinema.reply.Replybean">
+	   update movie_reply set dr_point=#{dr_point},dr_content=#{dr_content} where dr_no=#{dr_no}
+	</update>	 
+	 
+	<delete id="replyDel" parameterType="int">
+	   delete from movie_reply where dr_no= #{dr_no}
+	</delete>
+ 	
+	
+</mapper>

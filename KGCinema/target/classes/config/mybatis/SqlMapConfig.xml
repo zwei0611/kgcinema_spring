@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="dto" type="com.kg.cinema.movie.Moviebean"/>
+	</typeAliases>
+
+
+	<mappers>
+		<mapper resource="config/mybatis/main.xml"/>
+		<mapper resource="config/mybatis/movie.xml"/>
+		<mapper resource="config/mybatis/notice.xml"/>
+		<mapper resource="config/mybatis/event.xml"/>
+		<mapper resource="config/mybatis/join.xml"/>
+		<mapper resource="config/mybatis/login.xml"/>
+		<mapper resource="config/mybatis/admin.xml"/>
+		<mapper resource="config/mybatis/theater.xml"/>
+		<mapper resource="config/mybatis/schedule.xml"/>
+		<mapper resource="config/mybatis/screen.xml"/>
+		<mapper resource="config/mybatis/seat.xml"/>
+		<mapper resource="config/mybatis/reserve.xml"/>
+		<mapper resource="config/mybatis/reserve_cancel.xml"/>
+		<mapper resource="config/mybatis/reply.xml"/>
+	</mappers>
+
+
+</configuration>

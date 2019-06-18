@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="event">
+
+	<select id="selectAll"  resultType="com.kg.cinema.event.Eventbean">	   
+	   select * from (
+	   select rownum e_rn, e.* from
+	   (select * from event where ${skey} like '%' || #{sval,jdbcType=VARCHAR} || '%' order by e_no desc) e
+	   ) where e_rn between #{start} and #{end}
+	</select>
+	
+	<select id="countAll" resultType="int">
+	     select count(*)  from event
+	</select>
+	
+	<select id="countAllSearch" parameterType="com.kg.cinema.event.Eventbean"  resultType="int">
+ 	   select  count(*) from event where ${skey} like '%' || #{sval,jdbcType=VARCHAR} || '%'  
+ 	</select>
+ 	
+ 	<select id="detail" parameterType="int" resultType="com.kg.cinema.event.Eventbean">
+	   select * from event where e_no=#{e_no}
+	</select>
+	
+</mapper>

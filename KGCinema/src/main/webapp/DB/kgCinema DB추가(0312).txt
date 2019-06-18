@@ -1,0 +1,466 @@
+
+/*
+극장 추가
+*/
+insert into theater values(theater_seq.nextval,'서울','강남','서울시 강남구 역삼동','1103호');
+insert into theater values(theater_seq.nextval,'서울','코엑스','서울시 강남구 삼성동','지하1층');
+insert into theater values(theater_seq.nextval,'경기','고양스타필드','경기도 고양시','111');
+insert into theater values(theater_seq.nextval,'경기','별내','경기도 남양주시','11');
+insert into theater values(theater_seq.nextval,'인천','송도','인천 송도','12');
+insert into theater values(theater_seq.nextval,'인천','영종','인천 영종','12');
+insert into theater values(theater_seq.nextval,'대전/충청/세종','청주충북대','충북 청주시 사창동','12');
+insert into theater values(theater_seq.nextval,'대전/충청/세종','대전','대전 둔산동','12');
+insert into theater values(theater_seq.nextval,'부산/대구/경상','대구(칠성로)','대구 칠성','12');
+insert into theater values(theater_seq.nextval,'부산/대구/경상','부산대','부산','12');
+insert into theater values(theater_seq.nextval,'광주/전라','광주상무','광주 상무지구','12');
+insert into theater values(theater_seq.nextval,'광주/전라','순천','순천시','12');
+insert into theater values(theater_seq.nextval,'강원','남춘천','춘천시','12');
+insert into theater values(theater_seq.nextval,'강원','속초','속초시','12');
+insert into theater values(theater_seq.nextval,'제주','제주','제주시','12');
+
+
+/*
+상영관 추가
+*/
+insert into screen values(screen_seq.nextval,'강남','1관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'강남','2관','일반관',40,3,10000);
+insert into screen values(screen_seq.nextval,'강남','3관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'강남','MX관','MX관',43,2,13000);
+insert into screen values(screen_seq.nextval,'강남','4관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'코엑스','1관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'코엑스','2관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'코엑스','3관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'코엑스','4관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'코엑스','MX관','MX관',43,2,13000);
+insert into screen values(screen_seq.nextval,'고양스타필드','1관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'고양스타필드','2관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'고양스타필드','3관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'고양스타필드','4관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'고양스타필드','COMFORT관','COMFORT',40,3,11000);
+insert into screen values(screen_seq.nextval,'별내','1관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'별내','2관','일반관',40,3,10000);
+insert into screen values(screen_seq.nextval,'별내','3관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'별내','TableZone','TableZone',40,3,12000);
+insert into screen values(screen_seq.nextval,'별내','4관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'송도','1관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'송도','2관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'송도','3관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'송도','THE BOUTIQUE','THE BOUTIQUE',40,3,14000);
+insert into screen values(screen_seq.nextval,'송도','4관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'영종','1관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'영종','2관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'영종','3관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'영종','4관','일반관',40,3,10000);
+insert into screen values(screen_seq.nextval,'영종','5관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'청주충북대','1관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'청주충북대','2관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'청주충북대','3관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'청주충북대','4관','일반관',40,3,10000);
+insert into screen values(screen_seq.nextval,'청주충북대','5관','일반관',40,3,10000);
+insert into screen values(screen_seq.nextval,'대전','1관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'대전','2관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'대전','3관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'대전','4관','일반관',40,3,10000);
+insert into screen values(screen_seq.nextval,'대전','5관','일반관',40,3,10000);
+insert into screen values(screen_seq.nextval,'대구(칠성로)','1관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'대구(칠성로)','2관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'대구(칠성로)','3관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'대구(칠성로)','4관','일반관',40,3,10000);
+insert into screen values(screen_seq.nextval,'대구(칠성로)','5관','일반관',40,3,10000);
+insert into screen values(screen_seq.nextval,'부산대','1관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'부산대','2관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'부산대','3관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'부산대','4관','일반관',40,3,10000);
+insert into screen values(screen_seq.nextval,'부산대','5관','일반관',40,3,10000);
+insert into screen values(screen_seq.nextval,'광주상무','1관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'광주상무','2관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'광주상무','3관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'광주상무','4관','일반관',40,3,10000);
+insert into screen values(screen_seq.nextval,'광주상무','5관','일반관',40,3,10000);
+insert into screen values(screen_seq.nextval,'순천','1관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'순천','2관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'순천','3관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'순천','4관','일반관',40,3,10000);
+insert into screen values(screen_seq.nextval,'순천','5관','일반관',40,3,10000);
+insert into screen values(screen_seq.nextval,'남춘천','1관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'남춘천','2관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'남춘천','3관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'남춘천','4관','일반관',40,3,10000);
+insert into screen values(screen_seq.nextval,'남춘천','5관','일반관',40,3,10000);
+insert into screen values(screen_seq.nextval,'속초','1관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'속초','2관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'속초','3관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'속초','4관','일반관',40,3,10000);
+insert into screen values(screen_seq.nextval,'속초','5관','일반관',40,3,10000);
+insert into screen values(screen_seq.nextval,'제주','1관','일반관',49,1,10000);
+insert into screen values(screen_seq.nextval,'제주','2관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'제주','3관','일반관',43,2,10000);
+insert into screen values(screen_seq.nextval,'제주','4관','일반관',40,3,10000);
+insert into screen values(screen_seq.nextval,'제주','5관','일반관',40,3,10000);
+
+/*
+메인슬라이드추가
+*/
+insert into mainslide values(mainslide_seq.nextval,'캡틴 마블','Captain Marvel','새로운 히어로, 어벤져스의 희망',sysdate,'main_slide1.jpg');
+insert into mainslide values(mainslide_seq.nextval,null,null,null,sysdate,'main_slide2.jpg');
+insert into mainslide values(mainslide_seq.nextval,null,null,null,sysdate,'main_slide3.jpg');
+insert into mainslide values(mainslide_seq.nextval,null,null,null,sysdate,'main_slide4.jpg');
+
+/*
+무비슬라이드추가
+*/
+insert into movieslide values(movieslide_seq.nextval,sysdate,'movie_slide1.jpg','PlayfullKiss.mp4');
+insert into movieslide values(movieslide_seq.nextval,sysdate,'movie_slide2.jpg','BadCop.mp4');
+insert into movieslide values(movieslide_seq.nextval,sysdate,'movie_slide3.jpg','Money.mp4');
+
+/*
+영화추가
+*/
+insert into movie values(movie_seq.nextval,'캡틴 마블','Captain Marvel','12',null,'디지털(자막), ATMOS(자막), 3D(자막)',to_date('2019-03-06','yyyy-mm-dd'),'라이언 플렉, 애너 보든','브리 라슨, 사무엘 L.잭슨, 벤 멘델슨, 주드 로','SF, 액션, 어드벤처 / 123분',0,'위기에 빠진 어벤져스의 희망!<br/><br/>1995년, 공군 파일럿 시절의 기억을 잃고<br/>크리족 전사로 살아가던 캐럴 댄버스(브리 라슨)가 지구에 불시착한다.<br/>쉴드 요원 닉 퓨리(사무엘 L. 잭슨)에게 발견되어 팀을 이룬 그들은<br/>지구로 향하는 더 큰 위협을 감지하고<br/>힘을 합쳐 전쟁을 끝내야 하는데…','captainmarvel_poster.jpg','captainmarvel_steel1.jpg','captainmarvel_steel2.jpg','captainmarvel_steel3.jpg','captainmarvel_steel4.jpg','captainmarvel_steel5.jpg',null);
+insert into movie values(movie_seq.nextval,'돈','Money','15',null,'디지털',to_date('2019-03-20','yyyy-mm-dd'),'박누리','류준열(일현), 유지태(번호표), 조우진(한지철)','범죄 / 115분',0,'"부자가 되고 싶었다"<br/>오직 부자가 되고 싶은 꿈을 품고 여의도 증권가에 입성한 신입 주식 브로커 조일현(류준열).<br/>빽도 줄도 없는, 수수료 O원의 그는 곧 해고 직전의 처지로 몰린다.<br/>위기의 순간, 베일에 싸인 신화적인 작전 설계자 번호표(유지태)를 만나게 되고,<br/>막대한 이익을 챙길 수 있는 거래 참여를 제안 받는다.<br/>위험한 제안을 받아들인 후 순식간에 큰 돈을 벌게 되는 일현.<br/>승승장구하는 일현 앞에 번호표의 뒤를 쫓던 금융감독원의 사냥개 한지철(조우진)이 나타나<br/>그를 조여 오기 시작하는데…','money_poster.jpg','money_steel1.jpg','money_steel2.jpg','money_steel3.jpg','money_steel4.jpg','money_steel5.jpg',null);
+insert into movie values(movie_seq.nextval,'우상','Idol','15',null,'디지털',to_date('2019-03-20','yyyy-mm-dd'),'이수진','한석규, 설경구, 천우희','스릴러 / 143분',0,'아들의 사고로 정치 인생 최악의 위기를 맞게 된 남자<br/><br/>청렴한 도덕성으로 시민들의 뜨거운 지지를 받으며 차기 도지사로 주목받고 있는 도의원 구명회(한석규),<br/>어느 날 아들이 교통사고를 내고 이를 은폐한 사실을 알게 된다.<br/>신망받는 자신의 정치 인생이 무엇보다 중요했던 그는 아들을 자수시킨다.<br/><br/>숨 같은 아들이 죽고 진실을 쫓는 아버지<br/><br/>오직 아들만이 세상의 전부인 유중식(설경구)은 지체 장애 아들 부남을 위해서라면 못할 것이 없다.<br/>자신의 모든 것인 아들이 갑자기 교통사고를 당해 싸늘한 시체로 돌아오자 절망에 빠진다.<br/>사고 당일 아들의 행적을 이해할 수 없고, 함께 있다 자취를 감춘 며느리 최련화(천우희)를 찾기 위해 경찰에 도움을 청하지만 그의 말을 들어주는 사람은 없다.<br/>아들의 죽음 너머에 드리운 비밀을 밝히기 위해 중식은 홀로 사고를 파헤치기 시작한다.<br/><br/>사건 당일 비밀을 거머쥔 채 사라진 여자<br/><br/>한편 그날 밤 사고의 진실을 유일하게 알고 있는 최련화,<br/>부남과 함께 있다 연기처럼 사라져버린 그녀에게는 아무도 알지 못하는,<br/>알아서도 안 될 진실이 숨겨져 있는데…<br/><br/>그날의 사고로 세 사람의 지옥이 열린다!','idol_poster.jpg','idol_steel1.jpg','idol_steel2.jpg','idol_steel3.jpg','idol_steel4.jpg','idol_steel5.jpg',null);
+insert into movie values(movie_seq.nextval,'러브라이브! 선샤인!! 더 스쿨 아이돌 무비 오버 더 레인보우','LOVE LIVE SUNSHINE THE SCHOOL IDOL MOVIE : OVER THE RAINBOW , 2019','0',null,'디지털(자막)',to_date('2019-02-14','yyyy-mm-dd'),'사카이 카즈오','더빙','애니메이션 / 100분',0,'우라노호시 여고의 스쿨 아이돌로서 참가하는 마지막 ''러브라이브!''에서 멋지게 우승을 따낸 Aqours.<br/>새로운 학교로 편입할 준비를 하던 1, 2학년들에게 예상 밖의 트러블이 연발한다?<br/>게다가 졸업여행을 떠난 3학년들이 행방불명?!<br/>멀리 떨어진 후에야 처음으로 깨달은 서로의 빈 자리.<br/>새로운 한 걸음을 내딛기 위해, Aqours가 도달한 결론은 무엇일까?<br/>함께 달려온 빛나는 오늘을 넘어서<br/>미래로 날아가려는 모든 사람들에게 바치는, 최고의 라이브 엔터테인먼트 무비!','lovelive_poster.jpg','lovelive_steel1.jpg','lovelive_steel2.jpg','lovelive_steel3.jpg','lovelive_steel4.jpg','lovelive_steel5.jpg',null);
+insert into movie values(movie_seq.nextval,'항거:유관순 이야기','A Resistance','12',null,'디지털',to_date('2019-02-27','yyyy-mm-dd'),'조민호','고아성, 김새벽, 김예은, 정하담, 류경수','드라마 / 105분',0,'1919년 3.1 만세운동 후 세평도 안 되는 서대문 감옥 8호실 속,<br/>영혼만은 누구보다 자유로웠던 유관순과 8호실 여성들의 1년의 이야기.','resistance_poster.jpg','resistance_steel1.jpg','resistance_steel2.jpg','resistance_steel3.jpg','resistance_steel4.jpg','resistance_steel5.jpg',null);
+insert into movie values(movie_seq.nextval,'사바하','SVAHA : THE SIXTH FINGER , 2018','15',null,'디지털',to_date('2019-02-20','yyyy-mm-dd'),'장재현','이정재, 박정민, 이재인, 유지태','스릴러, 미스터리 / 122분',0,'신흥 종교 비리를 찾아내는 종교문제연구소 ‘박목사’(이정재).<br/>최근 사슴동산이라는 새로운 종교 단체를 조사 중이다.<br/>영월 터널에서 여중생이 사체로 발견되는 사건이 발생하고<br/>이를 쫓던 경찰과 우연히 사슴동산에서 마주친 박목사는 이번 건이 심상치 않음을 직감한다.<br/>터널 사건 유력 용의자의 자살, 그리고 실체를 알 수 없는 정비공 ‘나한’(박정민)과<br/>16년 전 태어난 쌍둥이 동생 ‘금화’(이재인)의 존재까지,<br/>사슴동산에 대해 파고들수록 박목사는 점점 더 많은 미스터리와 마주하게 되는데…!<br/><br/>그것이 태어나고 모든 사건이 시작되었다','svaha_poster.jpg','svaha_steel1.jpg','svaha_steel2.jpg','svaha_steel3.jpg','svaha_steel4.jpg','svaha_steel5.jpg',null);
+insert into movie values(movie_seq.nextval,'증인','Innocent Witness','12',null,'디지털, 디지털배리어프리',to_date('2019-02-13','yyyy-mm-dd'),'이한','김향기, 정우성','드라마 / 129분',0,'“목격자가 있어. 자폐아야”<br/><br/>신념은 잠시 접어두고 현실을 위해 속물이 되기로 마음먹은 민변 출신의 대형 로펌 변호사 ‘순호’(정우성).<br/>파트너 변호사로 승진할 수 있는 큰 기회가 걸린 사건의 변호사로 지목되자 살인 용의자의 무죄를 입증하기 위해 유일한 목격자인 자폐 소녀 ‘지우’(김향기)를 증인으로 세우려 한다.<br/><br/>“아저씨도 나를 이용할 겁니까?”<br/><br/>자기만의 세계에 빠져 의사소통이 어려운 ‘지우’.<br/>‘순호’는 사건 당일 목격한 것을 묻기 위해 ‘지우’를 찾아가지만, 제대로 된 인사조차 나누지 못한다.<br/>하지만 그날의 이야기를 듣기 위해 지우에게 다가가려 노력하는 ‘순호’, 시간이 흐를수록 조금씩 ‘지우’에 대해 이해하게 되지만 이제 두 사람은 법정에서 변호사와 증인으로 마주해야 하는데…<br/><br/>마음을 여는 순간,<br/>진실이 눈앞에 다가왔다','innocentwitness_poster.jpg','innocentwitness_steel1.jpg','innocentwitness_steel2.jpg','innocentwitness_steel3.jpg','innocentwitness_steel4.jpg','innocentwitness_steel5.jpg',null);
+insert into movie values(movie_seq.nextval,'악질경찰','Bad Cop','19',null,'디지털',to_date('2019-03-20','yyyy-mm-dd'),'이정범','이선균, 전소니, 박해준, 송영창, 박병은','드라마 / 127분',0,'뒷돈은 챙기고 비리는 눈감고 범죄는 사주하는 쓰레기같은 악질경찰이<br/>폭발사건 용의자로 몰리고 거대 기업의 음모에 휘말리며 벌어지는 범죄드라마','badcop_poster.jpg','badcop_steel1.jpg','badcop_steel2.jpg','badcop_steel3.jpg','badcop_steel4.jpg','badcop_steel5.jpg',null);
+insert into movie values(movie_seq.nextval,'극한직업','Extreme Job','15',null,'디지털, 디지털배리어프리',to_date('2019-01-23','yyyy-mm-dd'),'이병헌','류승룡(고반장), 이하늬(장형사), 진선규(마형사), 이동휘(영호), 공명(재훈)','코미디 / 111분',0,'낮에는 치킨장사! 밤에는 잠복근무!<br/>지금까지 이런 수사는 없었다!<br/><br/>불철주야 달리고 구르지만 실적은 바닥, 급기야 해체 위기를 맞는 마약반!<br/>더 이상 물러설 곳이 없는 팀의 맏형 고반장은 국제 범죄조직의 국내 마약 밀반입 정황을 포착하고 장형사, 마형사, 영호, 재훈까지 4명의 팀원들과 함께 잠복 수사에 나선다.<br/>마약반은 24시간 감시를 위해 범죄조직의 아지트 앞 치킨집을 인수해 위장 창업을 하게 되고, 뜻밖의 절대미각을 지닌 마형사의 숨은 재능으로 치킨집은 일약 맛집으로 입소문이 나기 시작한다.<br/>수사는 뒷전, 치킨장사로 눈코 뜰 새 없이 바빠진 마약반에게 어느 날 절호의 기회가 찾아오는데…<br/><br/>범인을 잡을 것인가, 닭을 잡을 것인가!<br/>2019년 새해, 출동!','extremejob_poster.jpg','extremejob_steel1.jpg','extremejob_steel2.jpg','extremejob_steel3.jpg','extremejob_steel4.jpg','extremejob_steel5.jpg',null);
+
+/*
+공지사항추가
+*/
+insert into notice values(notice_seq.nextval,null,'[라이브뷰잉] 러브라이브! 선샤인!! 아쿠아 월드 러브라이브! 아시아 투어 2019 in 상하이',sysdate,'안녕하세요. 메가박스입니다.
+<br/><br/>[라이브뷰잉] 러브라이브! 선샤인!! 아쿠아 월드 러브라이브! 아시아 투어 2019 in 상하이 를 메가박스에서 단독으로 생중계 상영 합니다.<br/><br/><br/><br/>1. 상영 안내<br/>- 일시: 2019년 3월 24일(일) 17:00<br/>- 러닝타임: 약 4시간 (당일 현장 상황에 따라 변동가능)
+<br/>- 상영지점: 동대문, 신촌, 부산대<br/><br/>2. 예매 안내<br/>- 가격: 40,000원<br/>- 티켓오픈: 2019년 3월 14일(목) 12:00~<br/>- 구매처: 메가박스 홈페이지, 모바일 어플 및 현장<br/>- 당일 환불 불가 (3/23(토) 24:00까지 환불 가능)<br/>* 본 라이브뷰잉의 경우, 일반 영화와 동일한 방식으로 예매가 진행됩니다. 위 구매처를 통해 상영작을 선택하신 후 예매를 진행해주시기 바랍니다.
+<br/>* 본 상영은 이벤트 상영인 관계로 결제 시 제휴, 할인카드 적용이 불가합니다.<br/>* 티켓의 높은 가격의 재판매 및 암표 판매 등은 엄격히 제한하고 있으며, 정가 이상의 티켓판매로 피해고객의 클레임이 당사로 신고·접수될 경우<br/>  해당 티켓 구매 고객의 관람 및 홈페이지 이용에 제한이 따를 수 있습니다.<br/><br/><br/><br/>3. 라이브뷰잉 관람 안내<br/>- 본 이벤트는 중국 상하이에서 진행되는 <LOVE LIVE! SUNSHINE!! Aqours World LoveLive! ASIA TOUR 2019> 이벤트를 위성으로 중계하는 이벤트입니다.
+<br/>- 본 이벤트는 생중계로 진행되기 때문에 날씨 등 불가항력적인 요인에 의해 영상, 음성에 차질이 생길 수 있으며, 별도의 자막은 제공되지 않습니다.<br/>- 본 이벤트는 현지 사정에 의해 러닝타임 및 프로그램이 변경될 수 있으며 공연이 예정시간을 훨씬 초과하는 경우 중계가 종료될 수 있습니다.<br/>- 본 이벤트는 영화관에서 관객 여러분이 즐길 수 있는 상영으로, 경우에 따라서는 박수와 환호성이 있을 수 있습니다.<br/>- 관람 도중 돌발행동이나 타인에게 불쾌감을 줄 수 있는 행동은 엄격히 금지되어 있으며, 경우에 따라서는 직원의 제지 및 환불없이 퇴장조치가 진행될 수 있습니다.<br/>- 극장 내에서는 어떤 경우라도 녹음 / 녹화 / 촬영은 금지되어 있습니다. 이와 같은 상황이 발생 시, 기록된 내용 삭제 후 퇴장조치가 있을 수 있습니다.');
+
+/*
+이벤트추가
+*/
+insert into event values(event_seq.nextval,'<장난스런 키스> 메가토크','2019-03-23','event1_content.jpg',sysdate,'event1_main.jpg');
+
+/*
+스케줄 추가
+*/
+insert into schedule values(schedule_seq.nextval,'강남','1관','캡틴 마블',to_date('2019-03-13 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 12:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','1관','캡틴 마블',to_date('2019-03-13 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 14:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','1관','캡틴 마블',to_date('2019-03-13 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 17:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','1관','캡틴 마블',to_date('2019-03-13 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 19:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','1관','캡틴 마블',to_date('2019-03-13 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 22:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','MX관','캡틴 마블',to_date('2019-03-13 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 12:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','MX관','캡틴 마블',to_date('2019-03-13 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 14:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','MX관','캡틴 마블',to_date('2019-03-13 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 17:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','MX관','캡틴 마블',to_date('2019-03-13 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 19:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','MX관','캡틴 마블',to_date('2019-03-13 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 22:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','4관','사바하',to_date('2019-03-13 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 12:12','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','4관','사바하',to_date('2019-03-13 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 14:42','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','4관','사바하',to_date('2019-03-13 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 17:12','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','4관','사바하',to_date('2019-03-13 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 19:42','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','4관','사바하',to_date('2019-03-13 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 22:12','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','3관','항거:유관순 이야기',to_date('2019-03-13 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 11:55','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','3관','항거:유관순 이야기',to_date('2019-03-13 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 14:25','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','3관','항거:유관순 이야기',to_date('2019-03-13 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 16:55','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','3관','항거:유관순 이야기',to_date('2019-03-13 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 19:25','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','3관','항거:유관순 이야기',to_date('2019-03-13 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 21:55','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','2관','극한직업',to_date('2019-03-13 21:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 23:01','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','4관','극한직업',to_date('2019-03-13 21:50','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 23:51','yyyy-mm-dd hh24:mi'));
+
+insert into schedule values(schedule_seq.nextval,'코엑스','1관','캡틴 마블',to_date('2019-03-13 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 12:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','1관','캡틴 마블',to_date('2019-03-13 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 14:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','1관','캡틴 마블',to_date('2019-03-13 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 17:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','1관','캡틴 마블',to_date('2019-03-13 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 19:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','1관','캡틴 마블',to_date('2019-03-13 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 22:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','MX관','캡틴 마블',to_date('2019-03-13 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 12:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','MX관','캡틴 마블',to_date('2019-03-13 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 14:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','MX관','캡틴 마블',to_date('2019-03-13 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 17:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','MX관','캡틴 마블',to_date('2019-03-13 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 19:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','MX관','캡틴 마블',to_date('2019-03-13 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 22:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','4관','사바하',to_date('2019-03-13 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 12:12','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','4관','사바하',to_date('2019-03-13 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 14:42','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','4관','사바하',to_date('2019-03-13 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 17:12','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','4관','사바하',to_date('2019-03-13 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 19:42','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','4관','사바하',to_date('2019-03-13 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 22:12','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','3관','항거:유관순 이야기',to_date('2019-03-13 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 11:55','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','3관','항거:유관순 이야기',to_date('2019-03-13 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 14:25','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','3관','항거:유관순 이야기',to_date('2019-03-13 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 16:55','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','3관','항거:유관순 이야기',to_date('2019-03-13 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 19:25','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','3관','항거:유관순 이야기',to_date('2019-03-13 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 21:55','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','2관','극한직업',to_date('2019-03-13 21:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 23:01','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','4관','극한직업',to_date('2019-03-13 21:50','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 23:51','yyyy-mm-dd hh24:mi'));
+
+insert into schedule values(schedule_seq.nextval,'고양스타필드','1관','캡틴 마블',to_date('2019-03-13 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 12:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','1관','캡틴 마블',to_date('2019-03-13 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 14:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','1관','캡틴 마블',to_date('2019-03-13 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 17:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','1관','캡틴 마블',to_date('2019-03-13 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 19:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','1관','캡틴 마블',to_date('2019-03-13 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 22:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','COMFORT관','캡틴 마블',to_date('2019-03-13 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 12:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','MX관','캡틴 마블',to_date('2019-03-13 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 14:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','MX관','캡틴 마블',to_date('2019-03-13 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 17:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','MX관','캡틴 마블',to_date('2019-03-13 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 19:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','MX관','캡틴 마블',to_date('2019-03-13 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 22:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','4관','사바하',to_date('2019-03-13 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 12:12','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','4관','사바하',to_date('2019-03-13 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 14:42','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','4관','사바하',to_date('2019-03-13 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 17:12','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','4관','사바하',to_date('2019-03-13 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 19:42','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','4관','사바하',to_date('2019-03-13 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 22:12','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','3관','항거:유관순 이야기',to_date('2019-03-13 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 11:55','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','3관','항거:유관순 이야기',to_date('2019-03-13 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 14:25','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','3관','항거:유관순 이야기',to_date('2019-03-13 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 16:55','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','3관','항거:유관순 이야기',to_date('2019-03-13 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 19:25','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','3관','항거:유관순 이야기',to_date('2019-03-13 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 21:55','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','2관','극한직업',to_date('2019-03-13 21:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-13 23:01','yyyy-mm-dd hh24:mi'));
+
+insert into schedule values(schedule_seq.nextval,'강남','1관','캡틴 마블',to_date('2019-03-14 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 12:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','1관','캡틴 마블',to_date('2019-03-14 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 14:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','1관','캡틴 마블',to_date('2019-03-14 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 17:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','1관','캡틴 마블',to_date('2019-03-14 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 19:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','1관','캡틴 마블',to_date('2019-03-14 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 22:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','MX관','캡틴 마블',to_date('2019-03-14 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 12:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','MX관','캡틴 마블',to_date('2019-03-14 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 14:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','MX관','캡틴 마블',to_date('2019-03-14 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 17:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','MX관','캡틴 마블',to_date('2019-03-14 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 19:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','MX관','캡틴 마블',to_date('2019-03-14 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 22:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','4관','사바하',to_date('2019-03-14 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 12:12','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','4관','사바하',to_date('2019-03-14 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 14:42','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','4관','사바하',to_date('2019-03-14 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 17:12','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','4관','사바하',to_date('2019-03-14 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 19:42','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','4관','사바하',to_date('2019-03-14 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 22:12','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','3관','항거:유관순 이야기',to_date('2019-03-14 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 11:55','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','3관','항거:유관순 이야기',to_date('2019-03-14 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 14:25','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','3관','항거:유관순 이야기',to_date('2019-03-14 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 16:55','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','3관','항거:유관순 이야기',to_date('2019-03-14 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 19:25','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','3관','항거:유관순 이야기',to_date('2019-03-14 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 21:55','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'강남','2관','극한직업',to_date('2019-03-14 21:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 23:01','yyyy-mm-dd hh24:mi'));
+
+
+
+insert into schedule values(schedule_seq.nextval,'코엑스','1관','캡틴 마블',to_date('2019-03-14 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 12:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','1관','캡틴 마블',to_date('2019-03-14 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 14:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','1관','캡틴 마블',to_date('2019-03-14 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 17:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','1관','캡틴 마블',to_date('2019-03-14 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 19:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','1관','캡틴 마블',to_date('2019-03-14 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 22:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','MX관','캡틴 마블',to_date('2019-03-14 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 12:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','MX관','캡틴 마블',to_date('2019-03-14 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 14:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','MX관','캡틴 마블',to_date('2019-03-14 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 17:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','MX관','캡틴 마블',to_date('2019-03-14 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 19:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','MX관','캡틴 마블',to_date('2019-03-14 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 22:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','4관','사바하',to_date('2019-03-14 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 12:12','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','4관','사바하',to_date('2019-03-14 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 14:42','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','4관','사바하',to_date('2019-03-14 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 17:12','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','4관','사바하',to_date('2019-03-14 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 19:42','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','4관','사바하',to_date('2019-03-14 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 22:12','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','3관','항거:유관순 이야기',to_date('2019-03-14 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 11:55','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','3관','항거:유관순 이야기',to_date('2019-03-14 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 14:25','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','3관','항거:유관순 이야기',to_date('2019-03-14 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 16:55','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','3관','항거:유관순 이야기',to_date('2019-03-14 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 19:25','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','3관','항거:유관순 이야기',to_date('2019-03-14 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 21:55','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'코엑스','2관','극한직업',to_date('2019-03-14 21:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 23:01','yyyy-mm-dd hh24:mi'));
+
+insert into schedule values(schedule_seq.nextval,'고양스타필드','1관','캡틴 마블',to_date('2019-03-14 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 12:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','1관','캡틴 마블',to_date('2019-03-14 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 14:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','1관','캡틴 마블',to_date('2019-03-14 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 17:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','1관','캡틴 마블',to_date('2019-03-14 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 19:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','1관','캡틴 마블',to_date('2019-03-14 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 22:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','COMFORT관','캡틴 마블',to_date('2019-03-14 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 12:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','MX관','캡틴 마블',to_date('2019-03-14 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 14:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','MX관','캡틴 마블',to_date('2019-03-14 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 17:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','MX관','캡틴 마블',to_date('2019-03-14 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 19:43','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','MX관','캡틴 마블',to_date('2019-03-14 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 22:13','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','4관','사바하',to_date('2019-03-14 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 12:12','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','4관','사바하',to_date('2019-03-14 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 14:42','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','4관','사바하',to_date('2019-03-14 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 17:12','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','4관','사바하',to_date('2019-03-14 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 19:42','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','4관','사바하',to_date('2019-03-14 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 22:12','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','3관','항거:유관순 이야기',to_date('2019-03-14 10:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 11:55','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','3관','항거:유관순 이야기',to_date('2019-03-14 12:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 14:25','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','3관','항거:유관순 이야기',to_date('2019-03-14 15:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 16:55','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','3관','항거:유관순 이야기',to_date('2019-03-14 17:30','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 19:25','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','3관','항거:유관순 이야기',to_date('2019-03-14 20:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 21:55','yyyy-mm-dd hh24:mi'));
+insert into schedule values(schedule_seq.nextval,'고양스타필드','2관','극한직업',to_date('2019-03-14 21:00','yyyy-mm-dd hh24:mi'),to_date('2019-03-14 23:01','yyyy-mm-dd hh24:mi'));
+
+/*
+예매 추가
+*/
+/*
+insert into reserve values(reserve_seq.nextval,'강남','1관','whalsanr','말모이','디지털',to_date('2019-03-02 22:00','yyyy-mm-dd hh24:mi'),'12세관람가','일반 2명, 청소년 1명','A4,A5,A6',28000);
+*/
+
+/*
+관리자 추가
+*/
+insert into join values(join_seq.nextval,'admin','관리자','1234','서울시 강남구','1103호',to_date('2019-01-01','yyyy-mm-dd'),'010-0000-0000','admin@kgcinema.com',null);
+
+/*
+s_type설명
+일반관, COMFORT, TableZone, MX, THE BOUTIQUE
+*/
+
+
+/*
+좌석 추가
+*/
+/*
+좌석스타일1번
+*/
+insert into seat values(seat_seq.nextval, 1, 'A', 1, 10, 23, 0);
+insert into seat values(seat_seq.nextval, 1, 'A', 2, 10, 41, 0);
+insert into seat values(seat_seq.nextval, 1, 'A', 3, 10, 59, 0);
+insert into seat values(seat_seq.nextval, 1, 'A', 4, 10, 95, 0);
+insert into seat values(seat_seq.nextval, 1, 'A', 5, 10, 113, 0);
+insert into seat values(seat_seq.nextval, 1, 'A', 6, 10, 131, 0);
+insert into seat values(seat_seq.nextval, 1, 'A', 7, 10, 149, 0);
+
+insert into seat values(seat_seq.nextval, 1, 'B', 1, 10, 23, 18);
+insert into seat values(seat_seq.nextval, 1, 'B', 2, 10, 41, 18);
+insert into seat values(seat_seq.nextval, 1, 'B', 3, 10, 59, 18);
+insert into seat values(seat_seq.nextval, 1, 'B', 4, 10, 95, 18);
+insert into seat values(seat_seq.nextval, 1, 'B', 5, 10, 113, 18);
+insert into seat values(seat_seq.nextval, 1, 'B', 6, 10, 131, 18);
+insert into seat values(seat_seq.nextval, 1, 'B', 7, 10, 149, 18);
+
+insert into seat values(seat_seq.nextval, 1, 'C', 1, 10, 23, 36);
+insert into seat values(seat_seq.nextval, 1, 'C', 2, 10, 41, 36);
+insert into seat values(seat_seq.nextval, 1, 'C', 3, 10, 59, 36);
+insert into seat values(seat_seq.nextval, 1, 'C', 4, 10, 95, 36);
+insert into seat values(seat_seq.nextval, 1, 'C', 5, 10, 113, 36);
+insert into seat values(seat_seq.nextval, 1, 'C', 6, 10, 131, 36);
+insert into seat values(seat_seq.nextval, 1, 'C', 7, 10, 149, 36);
+
+insert into seat values(seat_seq.nextval, 1, 'D', 1, 10, 23, 54);
+insert into seat values(seat_seq.nextval, 1, 'D', 2, 10, 41, 54);
+insert into seat values(seat_seq.nextval, 1, 'D', 3, 10, 59, 54);
+insert into seat values(seat_seq.nextval, 1, 'D', 4, 10, 95, 54);
+insert into seat values(seat_seq.nextval, 1, 'D', 5, 10, 113, 54);
+insert into seat values(seat_seq.nextval, 1, 'D', 6, 10, 131, 54);
+insert into seat values(seat_seq.nextval, 1, 'D', 7, 10, 149, 54);
+
+insert into seat values(seat_seq.nextval, 1, 'E', 1, 10, 23, 72);
+insert into seat values(seat_seq.nextval, 1, 'E', 2, 10, 41, 72);
+insert into seat values(seat_seq.nextval, 1, 'E', 3, 10, 59, 72);
+insert into seat values(seat_seq.nextval, 1, 'E', 4, 10, 95, 72);
+insert into seat values(seat_seq.nextval, 1, 'E', 5, 10, 113, 72);
+insert into seat values(seat_seq.nextval, 1, 'E', 6, 10, 131, 72);
+insert into seat values(seat_seq.nextval, 1, 'E', 7, 10, 149, 72);
+
+insert into seat values(seat_seq.nextval, 1, 'F', 1, 10, 23, 90);
+insert into seat values(seat_seq.nextval, 1, 'F', 2, 10, 41, 90);
+insert into seat values(seat_seq.nextval, 1, 'F', 3, 10, 59, 90);
+insert into seat values(seat_seq.nextval, 1, 'F', 4, 10, 95, 90);
+insert into seat values(seat_seq.nextval, 1, 'F', 5, 10, 113, 90);
+insert into seat values(seat_seq.nextval, 1, 'F', 6, 10, 131, 90);
+insert into seat values(seat_seq.nextval, 1, 'F', 7, 10, 149, 90);
+
+insert into seat values(seat_seq.nextval, 1, 'G', 1, 10, 23, 108);
+insert into seat values(seat_seq.nextval, 1, 'G', 2, 10, 41, 108);
+insert into seat values(seat_seq.nextval, 1, 'G', 3, 10, 59, 108);
+insert into seat values(seat_seq.nextval, 1, 'G', 4, 10, 95, 108);
+insert into seat values(seat_seq.nextval, 1, 'G', 5, 10, 113, 108);
+insert into seat values(seat_seq.nextval, 1, 'G', 6, 10, 131, 108);
+insert into seat values(seat_seq.nextval, 1, 'G', 7, 10, 149, 108);
+
+
+/*
+좌석스타일 2번
+*/
+insert into seat values(seat_seq.nextval, 2, 'A', 1, 10, 23, 0);
+insert into seat values(seat_seq.nextval, 2, 'A', 2, 10, 41, 0);
+insert into seat values(seat_seq.nextval, 2, 'A', 3, 10, 77, 0);
+insert into seat values(seat_seq.nextval, 2, 'A', 4, 10, 95, 0);
+insert into seat values(seat_seq.nextval, 2, 'A', 6, 10, 131, 0);
+insert into seat values(seat_seq.nextval, 2, 'A', 7, 10, 149, 0);
+insert into seat values(seat_seq.nextval, 2, 'A', 8, 10, 167, 0);
+
+insert into seat values(seat_seq.nextval, 2, 'B', 1, 10, 23, 18);
+insert into seat values(seat_seq.nextval, 2, 'B', 2, 10, 41, 18);
+insert into seat values(seat_seq.nextval, 2, 'B', 3, 10, 77, 18);
+insert into seat values(seat_seq.nextval, 2, 'B', 4, 10, 95, 18);
+insert into seat values(seat_seq.nextval, 2, 'B', 5, 10, 113, 18);
+insert into seat values(seat_seq.nextval, 2, 'B', 6, 10, 131, 18);
+insert into seat values(seat_seq.nextval, 2, 'B', 7, 10, 149, 18);
+insert into seat values(seat_seq.nextval, 2, 'B', 8, 10, 167, 18);
+
+insert into seat values(seat_seq.nextval, 2, 'C', 1, 10, 23, 36);
+insert into seat values(seat_seq.nextval, 2, 'C', 2, 10, 41, 36);
+insert into seat values(seat_seq.nextval, 2, 'C', 3, 10, 77, 36);
+insert into seat values(seat_seq.nextval, 2, 'C', 4, 10, 95, 36);
+insert into seat values(seat_seq.nextval, 2, 'C', 5, 10, 113, 36);
+insert into seat values(seat_seq.nextval, 2, 'C', 6, 10, 131, 36);
+insert into seat values(seat_seq.nextval, 2, 'C', 7, 10, 149, 36);
+
+insert into seat values(seat_seq.nextval, 2, 'D', 1, 10, 23, 54);
+insert into seat values(seat_seq.nextval, 2, 'D', 2, 10, 41, 54);
+insert into seat values(seat_seq.nextval, 2, 'D', 3, 10, 77, 54);
+insert into seat values(seat_seq.nextval, 2, 'D', 4, 10, 95, 54);
+insert into seat values(seat_seq.nextval, 2, 'D', 5, 10, 113, 54);
+insert into seat values(seat_seq.nextval, 2, 'D', 6, 10, 131, 54);
+insert into seat values(seat_seq.nextval, 2, 'D', 7, 10, 149, 54);
+
+insert into seat values(seat_seq.nextval, 2, 'E', 1, 10, 23, 72);
+insert into seat values(seat_seq.nextval, 2, 'E', 2, 10, 41, 72);
+insert into seat values(seat_seq.nextval, 2, 'E', 3, 10, 77, 72);
+insert into seat values(seat_seq.nextval, 2, 'E', 4, 10, 95, 72);
+insert into seat values(seat_seq.nextval, 2, 'E', 5, 10, 113, 72);
+insert into seat values(seat_seq.nextval, 2, 'E', 6, 10, 131, 72);
+insert into seat values(seat_seq.nextval, 2, 'E', 7, 10, 149, 72);
+
+insert into seat values(seat_seq.nextval, 2, 'F', 1, 10, 23, 90);
+insert into seat values(seat_seq.nextval, 2, 'F', 2, 10, 41, 90);
+insert into seat values(seat_seq.nextval, 2, 'F', 3, 10, 77, 90);
+insert into seat values(seat_seq.nextval, 2, 'F', 4, 10, 95, 90);
+insert into seat values(seat_seq.nextval, 2, 'F', 5, 10, 113, 90);
+insert into seat values(seat_seq.nextval, 2, 'F', 6, 10, 131, 90);
+insert into seat values(seat_seq.nextval, 2, 'F', 7, 10, 149, 90);
+
+
+/*
+좌석스타일 3번
+*/
+
+insert into seat values(seat_seq.nextval, 3, 'A', 1, 10, 23, 0);
+insert into seat values(seat_seq.nextval, 3, 'A', 2, 10, 41, 0);
+insert into seat values(seat_seq.nextval, 3, 'A', 3, 10, 77, 0);
+insert into seat values(seat_seq.nextval, 3, 'A', 4, 10, 95, 0);
+insert into seat values(seat_seq.nextval, 3, 'A', 5, 10, 113, 0);
+insert into seat values(seat_seq.nextval, 3, 'A', 6, 10, 131, 0);
+insert into seat values(seat_seq.nextval, 3, 'A', 7, 10, 167, 0);
+insert into seat values(seat_seq.nextval, 3, 'A', 8, 10, 185, 0);
+
+insert into seat values(seat_seq.nextval, 3, 'B', 1, 10, 23, 18);
+insert into seat values(seat_seq.nextval, 3, 'B', 2, 10, 41, 18);
+insert into seat values(seat_seq.nextval, 3, 'B', 3, 10, 77, 18);
+insert into seat values(seat_seq.nextval, 3, 'B', 4, 10, 95, 18);
+insert into seat values(seat_seq.nextval, 3, 'B', 5, 10, 113, 18);
+insert into seat values(seat_seq.nextval, 3, 'B', 6, 10, 131, 18);
+insert into seat values(seat_seq.nextval, 3, 'B', 7, 10, 167, 18);
+insert into seat values(seat_seq.nextval, 3, 'B', 8, 10, 185, 18);
+
+insert into seat values(seat_seq.nextval, 3, 'C', 1, 10, 23, 36);
+insert into seat values(seat_seq.nextval, 3, 'C', 2, 10, 41, 36);
+insert into seat values(seat_seq.nextval, 3, 'C', 3, 10, 77, 36);
+insert into seat values(seat_seq.nextval, 3, 'C', 4, 10, 95, 36);
+insert into seat values(seat_seq.nextval, 3, 'C', 5, 10, 113, 36);
+insert into seat values(seat_seq.nextval, 3, 'C', 6, 10, 131, 36);
+insert into seat values(seat_seq.nextval, 3, 'C', 7, 10, 167, 36);
+insert into seat values(seat_seq.nextval, 3, 'C', 8, 10, 185, 36);
+
+insert into seat values(seat_seq.nextval, 3, 'D', 1, 10, 23, 54);
+insert into seat values(seat_seq.nextval, 3, 'D', 2, 10, 41, 54);
+insert into seat values(seat_seq.nextval, 3, 'D', 3, 10, 77, 54);
+insert into seat values(seat_seq.nextval, 3, 'D', 4, 10, 95, 54);
+insert into seat values(seat_seq.nextval, 3, 'D', 5, 10, 113, 54);
+insert into seat values(seat_seq.nextval, 3, 'D', 6, 10, 131, 54);
+insert into seat values(seat_seq.nextval, 3, 'D', 7, 10, 167, 54);
+insert into seat values(seat_seq.nextval, 3, 'D', 8, 10, 185, 54);
+
+insert into seat values(seat_seq.nextval, 3, 'E', 1, 10, 23, 72);
+insert into seat values(seat_seq.nextval, 3, 'E', 2, 10, 41, 72);
+insert into seat values(seat_seq.nextval, 3, 'E', 3, 10, 77, 72);
+insert into seat values(seat_seq.nextval, 3, 'E', 4, 10, 95, 72);
+insert into seat values(seat_seq.nextval, 3, 'E', 5, 10, 113, 72);
+insert into seat values(seat_seq.nextval, 3, 'E', 6, 10, 131, 72);
+insert into seat values(seat_seq.nextval, 3, 'E', 7, 10, 167, 72);
+insert into seat values(seat_seq.nextval, 3, 'E', 8, 10, 185, 72);
+
+commit;
+
